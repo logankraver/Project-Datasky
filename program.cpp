@@ -5,18 +5,18 @@
 #include <glm/gtc/type_ptr.hpp>
 
 //infrastructure
-#include </home/logan/C++ Graphics/game/shader.h>
-#include </home/logan/C++ Graphics/game/texture.h>
+#include </home/logan/C++ Graphics/Project Datasky/shader.h>
+#include </home/logan/C++ Graphics/Project Datasky/texture.h>
 
 //tile map
-#include </home/logan/C++ Graphics/game/tile.h>
-#include </home/logan/C++ Graphics/game/chunk.h>
-#include </home/logan/C++ Graphics/game/globalmap.h>
+#include </home/logan/C++ Graphics/Project Datasky/tile.h>
+#include </home/logan/C++ Graphics/Project Datasky/chunk.h>
+#include </home/logan/C++ Graphics/Project Datasky/globalmap.h>
 
 //objects
-#include </home/logan/C++ Graphics/game/tree.h>
+#include </home/logan/C++ Graphics/Project Datasky/tree.h>
 
-#include </home/logan/C++ Graphics/game/player.h>
+#include </home/logan/C++ Graphics/Project Datasky/player.h>
 
 #include <iostream>
 
