@@ -3,7 +3,7 @@
 #include "texture.h"
 
 #include <glad/glad.h>
-#include </home/logan/C++ Graphics/game/stb_image.h>
+#include </home/logan/C++ Graphics/Project Datasky/stb_image.h>
 
 #include <iostream>
 
