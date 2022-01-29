@@ -56,6 +56,3 @@ THE TO-DO LIST
 - add infinite world gen (DONE)
 - render only spec chunks to help performance (DONE)
 - Procedurally generated trees
-
-COMPILE COMMAND
-g++ program.cpp glad.c shader.cpp texture.cpp tile.cpp chunk.cpp globalmap.cpp player.cpp tree.cpp object.cpp -ldl -lglfw
