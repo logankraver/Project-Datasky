@@ -4,22 +4,19 @@
 #include <tuple>
 #include <map>
 
-#include "../player/player.h"
 #include "tree.h"
 
 class objectGenerator {
     public:
-        std::map< std::tuple<int, int, int, int>, tree> treeMap;
+        std::map<std::tuple<int, int, int, int>, tree> treeMap;
 
         objectGenerator() { };
         
-        void generate(player player);
+        void generate(std::tuple<int, int> coordinate);
 
         void render();
 
     private:
-        std::tuple<int, int> getPlayerCoord(player player); 
-
         void generateTrees(std::tuple<int, int> coordinates);
 };
 

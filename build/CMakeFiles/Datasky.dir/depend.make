@@ -6,6 +6,7 @@ CMakeFiles/Datasky.dir/libraries/glad.c.o: ../libraries/glad.c
 CMakeFiles/Datasky.dir/src/main.cpp.o: ../libraries/glfw-3.3.6/include/GLFW/glfw3.h
 CMakeFiles/Datasky.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/Datasky.dir/src/main.cpp.o: ../src/objects/object.h
+CMakeFiles/Datasky.dir/src/main.cpp.o: ../src/objects/objectgenerator.h
 CMakeFiles/Datasky.dir/src/main.cpp.o: ../src/objects/tree.h
 CMakeFiles/Datasky.dir/src/main.cpp.o: ../src/player/player.h
 CMakeFiles/Datasky.dir/src/main.cpp.o: ../src/shaders/shader.h
@@ -21,8 +22,6 @@ CMakeFiles/Datasky.dir/src/objects/objectgenerator.cpp.o: ../src/objects/object.
 CMakeFiles/Datasky.dir/src/objects/objectgenerator.cpp.o: ../src/objects/objectgenerator.cpp
 CMakeFiles/Datasky.dir/src/objects/objectgenerator.cpp.o: ../src/objects/objectgenerator.h
 CMakeFiles/Datasky.dir/src/objects/objectgenerator.cpp.o: ../src/objects/tree.h
-CMakeFiles/Datasky.dir/src/objects/objectgenerator.cpp.o: ../src/player/player.h
-CMakeFiles/Datasky.dir/src/objects/objectgenerator.cpp.o: ../src/shaders/shader.h
 
 CMakeFiles/Datasky.dir/src/objects/tree.cpp.o: ../src/objects/object.h
 CMakeFiles/Datasky.dir/src/objects/tree.cpp.o: ../src/objects/tree.cpp
@@ -44,6 +43,9 @@ CMakeFiles/Datasky.dir/src/worldgen/chunk.cpp.o: ../src/worldgen/chunk.cpp
 CMakeFiles/Datasky.dir/src/worldgen/chunk.cpp.o: ../src/worldgen/chunk.h
 CMakeFiles/Datasky.dir/src/worldgen/chunk.cpp.o: ../src/worldgen/tile.h
 
+CMakeFiles/Datasky.dir/src/worldgen/globalmap.cpp.o: ../src/objects/object.h
+CMakeFiles/Datasky.dir/src/worldgen/globalmap.cpp.o: ../src/objects/objectgenerator.h
+CMakeFiles/Datasky.dir/src/worldgen/globalmap.cpp.o: ../src/objects/tree.h
 CMakeFiles/Datasky.dir/src/worldgen/globalmap.cpp.o: ../src/player/player.h
 CMakeFiles/Datasky.dir/src/worldgen/globalmap.cpp.o: ../src/shaders/shader.h
 CMakeFiles/Datasky.dir/src/worldgen/globalmap.cpp.o: ../src/worldgen/chunk.h

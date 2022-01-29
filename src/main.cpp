@@ -15,6 +15,8 @@
 
 //objects
 #include </home/logan/C++ Graphics/Project Datasky/src/objects/tree.h>
+#include </home/logan/C++ Graphics/Project Datasky/src/objects/objectgenerator.h>
+
 
 #include </home/logan/C++ Graphics/Project Datasky/src/player/player.h>
 
@@ -75,8 +77,11 @@ int main() {
     player playercharacter;
     player *ptrPlayer = &playercharacter;
 
+    //object generator
+    objectGenerator oGen;
+
     //global map
-    globalmap worldmap;
+    globalmap worldmap(oGen);
     
     //shaders
     shader spriteShader("../src/shaders/sprite.vert", "../src/shaders/sprite.frag");
@@ -105,7 +110,6 @@ int main() {
 
         worldmap.render(spriteShader, playercharacter);
         playercharacter.render(spriteShader);
-
 
         worldmap.passiveGeneration(playercharacter);
         

@@ -7,6 +7,7 @@ CMakeFiles/Datasky.dir/src/main.cpp.o
  ../libraries/glfw-3.3.6/include/GLFW/glfw3.h
  /home/logan/C++ Graphics/Project Datasky/src/main.cpp
  /home/logan/C++ Graphics/Project Datasky/src/objects/object.h
+ /home/logan/C++ Graphics/Project Datasky/src/objects/objectgenerator.h
  /home/logan/C++ Graphics/Project Datasky/src/objects/tree.h
  /home/logan/C++ Graphics/Project Datasky/src/player/player.h
  /home/logan/C++ Graphics/Project Datasky/src/shaders/shader.h
@@ -22,8 +23,6 @@ CMakeFiles/Datasky.dir/src/objects/objectgenerator.cpp.o
  /home/logan/C++ Graphics/Project Datasky/src/objects/objectgenerator.cpp
  /home/logan/C++ Graphics/Project Datasky/src/objects/objectgenerator.h
  /home/logan/C++ Graphics/Project Datasky/src/objects/tree.h
- /home/logan/C++ Graphics/Project Datasky/src/player/player.h
- /home/logan/C++ Graphics/Project Datasky/src/shaders/shader.h
 CMakeFiles/Datasky.dir/src/objects/tree.cpp.o
  /home/logan/C++ Graphics/Project Datasky/src/objects/object.h
  /home/logan/C++ Graphics/Project Datasky/src/objects/tree.cpp
@@ -45,6 +44,9 @@ CMakeFiles/Datasky.dir/src/worldgen/chunk.cpp.o
  /home/logan/C++ Graphics/Project Datasky/src/worldgen/chunk.h
  /home/logan/C++ Graphics/Project Datasky/src/worldgen/tile.h
 CMakeFiles/Datasky.dir/src/worldgen/globalmap.cpp.o
+ /home/logan/C++ Graphics/Project Datasky/src/objects/object.h
+ /home/logan/C++ Graphics/Project Datasky/src/objects/objectgenerator.h
+ /home/logan/C++ Graphics/Project Datasky/src/objects/tree.h
  /home/logan/C++ Graphics/Project Datasky/src/player/player.h
  /home/logan/C++ Graphics/Project Datasky/src/shaders/shader.h
  /home/logan/C++ Graphics/Project Datasky/src/worldgen/chunk.h

@@ -10,20 +10,21 @@
 const unsigned int initialChunks = 3;
 const biome defaultBiome = PLAINS;
 
-globalmap::globalmap() 
+globalmap::globalmap(objectGenerator Gen) 
 {
+    objgen = Gen;
     generateInitialChunks();
 }
 
 void globalmap::render(shader shader, player playerchar)
 {
+    //render chunks
     std::map<std::tuple <int, int>, chunk>::iterator it;
     std::tuple <int, int> playerCoord = playerchar.getChunkCoordinate();
     for (it = globe.begin(); it != globe.end(); it++)
     {
         //find chunk coordinate
         std::tuple<int, int> coordinate = it->first;
-        //if (std::get<0>(playerCoord) - 3 <= std::get<0>(coordinate) <= std::get<0>(playerCoord) + 3 && std::get<1>(playerCoord) - 3 <= std::get<1>(coordinate) <= std::get<1>(playerCoord) + 3)
         if (std::get<0>(playerCoord) - 3 <= std::get<0>(coordinate) && std::get<0>(playerCoord) + 3 >= std::get<0>(coordinate) && std::get<1>(playerCoord) - 3 <= std::get<1>(coordinate) && std::get<1>(playerCoord) + 3 >= std::get<1>(coordinate))
         {
             //create translation matrix
@@ -33,6 +34,26 @@ void globalmap::render(shader shader, player playerchar)
 
             //render
             (it->second).render(shader, model);
+        }
+    }
+
+    //render trees
+    std::map<std::tuple <int, int, int, int>, tree>::iterator itt;
+    for (itt = objgen.treeMap.begin(); itt != objgen.treeMap.end(); itt++)
+    {
+        //find tree coordinate
+        std::tuple<int, int> treeCoord(std::get<0>(itt->first), std::get<1>(itt->first)); 
+        if (std::get<0>(playerCoord) - 3 <= std::get<0>(treeCoord) && std::get<0>(playerCoord) + 3 >= std::get<0>(treeCoord) && std::get<1>(playerCoord) - 3 <= std::get<1>(treeCoord) && std::get<1>(playerCoord) + 3 >= std::get<1>(treeCoord))
+        {
+            //create translation matrix
+            glm::mat4 model = glm::mat4(1.0f);
+            glm::vec3 translation = glm::vec3(0.4f*(std::get<0>(itt->first)) + 0.05f*(std::get<2>(itt->first)), 0.4f*(std::get<1>(itt->first)) + 0.05f*(std::get<3>(itt->first)), 0.0f);
+            model = glm::translate(model, translation);
+            model = glm::rotate(model, glm::radians(180.0f), glm::vec3(0.0f, 0.0f, 1.0f));
+
+            //render
+            shader.setMat4("model", model);
+            (itt->second).render();
         }
     }
     
@@ -101,6 +122,7 @@ void globalmap::generateInitialChunks()
         {
             std::tuple<int, int> coordinate(x, y);
             globe.emplace(coordinate, chunk(defaultBiome));
+            objgen.generate(coordinate);
         }
     }
 }
@@ -128,6 +150,7 @@ void globalmap::generateChunks(directions d, std::tuple<int, int> coordinate)
                 if (generate)
                 {
                     globe.emplace(newCoordinate, chunk(defaultBiome));
+                    objgen.generate(newCoordinate);
                 }
             }
         }
@@ -153,6 +176,7 @@ void globalmap::generateChunks(directions d, std::tuple<int, int> coordinate)
                 if (generate)
                 {
                     globe.emplace(newCoordinate, chunk(defaultBiome));
+                    objgen.generate(newCoordinate);
                 }
             }
         }
@@ -178,6 +202,7 @@ void globalmap::generateChunks(directions d, std::tuple<int, int> coordinate)
                 if (generate)
                 {
                     globe.emplace(newCoordinate, chunk(defaultBiome));
+                    objgen.generate(newCoordinate);
                 }
             }
         }
@@ -203,6 +228,7 @@ void globalmap::generateChunks(directions d, std::tuple<int, int> coordinate)
                 if (generate)
                 {
                     globe.emplace(newCoordinate, chunk(defaultBiome));
+                    objgen.generate(newCoordinate);
                 }
             }
         }

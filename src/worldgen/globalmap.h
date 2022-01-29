@@ -4,6 +4,7 @@
 #include <map>
 #include <tuple>
 
+#include "../objects/objectgenerator.h"
 #include "../shaders/shader.h"
 #include "chunk.h"
 #include "../player/player.h"
@@ -20,8 +21,11 @@ class globalmap {
         //map data structure to hold the coordinate for each chunk
         std::map<std::tuple <int, int>, chunk> globe;
 
+        //the object generator
+        objectGenerator objgen;
+
         //constructor
-        globalmap();
+        globalmap(objectGenerator Gen);
 
         //render
         void render(shader shader, player playerchar);

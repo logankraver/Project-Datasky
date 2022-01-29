@@ -48,6 +48,9 @@ Tree Class
 - Subclass of object
 - Literally a tree
 
+- Tree Generation:
+* Map of all trees generated with a tuple with chunk and block coordinate
+
 THE TO-DO LIST
 - Generate 9 chunks using the global map class (DONE)
 - Create player class
@@ -55,4 +58,4 @@ THE TO-DO LIST
 2. add movement with player sprite (DONE)
 - add infinite world gen (DONE)
 - render only spec chunks to help performance (DONE)
-- Procedurally generated trees
+- Procedurally generated trees (DONE)

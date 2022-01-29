@@ -6,81 +6,15 @@
 
 #IncludeRegexTransform: 
 
-../libraries/glfw-3.3.6/include/GLFW/glfw3.h
-stddef.h
--
-stdint.h
--
-vulkan/vulkan.h
--
-GLES/gl.h
--
-GLES/glext.h
--
-GLES2/gl2.h
--
-GLES2/gl2ext.h
--
-GLES3/gl3.h
--
-GLES2/gl2ext.h
--
-GLES3/gl31.h
--
-GLES2/gl2ext.h
--
-GLES3/gl32.h
--
-GLES2/gl2ext.h
--
-OpenGL/gl3.h
--
-OpenGL/gl3ext.h
--
-GL/glcorearb.h
--
-GL/glext.h
--
-OpenGL/glu.h
--
-GL/glu.h
--
-OpenGL/gl.h
--
-GL/gl.h
--
-GL/glext.h
--
-
-/home/logan/C++ Graphics/Project Datasky/src/main.cpp
-glad/glad.h
--
-GLFW/glfw3.h
--
-glm/glm.hpp
--
-glm/gtc/matrix_transform.hpp
--
-glm/gtc/type_ptr.hpp
--
-/home/logan/C++ Graphics/Project Datasky/src/shaders/shader.h
--
-/home/logan/C++ Graphics/Project Datasky/src/textures/texture.h
--
-/home/logan/C++ Graphics/Project Datasky/src/worldgen/tile.h
--
-/home/logan/C++ Graphics/Project Datasky/src/worldgen/chunk.h
--
-/home/logan/C++ Graphics/Project Datasky/src/worldgen/globalmap.h
--
-/home/logan/C++ Graphics/Project Datasky/src/objects/tree.h
--
-/home/logan/C++ Graphics/Project Datasky/src/player/player.h
--
-iostream
--
-
 /home/logan/C++ Graphics/Project Datasky/src/objects/object.h
+
+/home/logan/C++ Graphics/Project Datasky/src/objects/objectgenerator.h
+tuple
+-
+map
+-
+tree.h
+/home/logan/C++ Graphics/Project Datasky/src/objects/tree.h
 
 /home/logan/C++ Graphics/Project Datasky/src/objects/tree.h
 object.h
@@ -106,8 +40,6 @@ glm/gtc/type_ptr.hpp
 string
 -
 
-/home/logan/C++ Graphics/Project Datasky/src/textures/texture.h
-
 /home/logan/C++ Graphics/Project Datasky/src/worldgen/chunk.h
 ../shaders/shader.h
 /home/logan/C++ Graphics/Project Datasky/src/shaders/shader.h
@@ -120,11 +52,25 @@ glm/glm.hpp
 glm/gtc/matrix_transform.hpp
 -
 
+/home/logan/C++ Graphics/Project Datasky/src/worldgen/globalmap.cpp
+globalmap.h
+/home/logan/C++ Graphics/Project Datasky/src/worldgen/globalmap.h
+iterator
+-
+iostream
+-
+glm/glm.hpp
+-
+glm/gtc/matrix_transform.hpp
+-
+
 /home/logan/C++ Graphics/Project Datasky/src/worldgen/globalmap.h
 map
 -
 tuple
 -
+../objects/objectgenerator.h
+/home/logan/C++ Graphics/Project Datasky/src/objects/objectgenerator.h
 ../shaders/shader.h
 /home/logan/C++ Graphics/Project Datasky/src/shaders/shader.h
 chunk.h
