@@ -6,19 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/logan/C++ Graphics/Project Datasky/src/objects/object.h
-
-/home/logan/C++ Graphics/Project Datasky/src/objects/objectgenerator.h
-tuple
+/home/logan/C++ Graphics/Project Datasky/src/player/player.cpp
+player.h
+/home/logan/C++ Graphics/Project Datasky/src/player/player.h
+iostream
 -
-map
--
-tree.h
-/home/logan/C++ Graphics/Project Datasky/src/objects/tree.h
-
-/home/logan/C++ Graphics/Project Datasky/src/objects/tree.h
-object.h
-/home/logan/C++ Graphics/Project Datasky/src/objects/object.h
 
 /home/logan/C++ Graphics/Project Datasky/src/player/player.h
 ../shaders/shader.h
@@ -39,44 +31,4 @@ glm/gtc/type_ptr.hpp
 -
 string
 -
-
-/home/logan/C++ Graphics/Project Datasky/src/worldgen/chunk.h
-../shaders/shader.h
-/home/logan/C++ Graphics/Project Datasky/src/shaders/shader.h
-tile.h
-/home/logan/C++ Graphics/Project Datasky/src/worldgen/tile.h
-vector
--
-glm/glm.hpp
--
-glm/gtc/matrix_transform.hpp
--
-
-/home/logan/C++ Graphics/Project Datasky/src/worldgen/globalmap.cpp
-globalmap.h
-/home/logan/C++ Graphics/Project Datasky/src/worldgen/globalmap.h
-iterator
--
-iostream
--
-glm/glm.hpp
--
-glm/gtc/matrix_transform.hpp
--
-
-/home/logan/C++ Graphics/Project Datasky/src/worldgen/globalmap.h
-map
--
-tuple
--
-../objects/objectgenerator.h
-/home/logan/C++ Graphics/Project Datasky/src/objects/objectgenerator.h
-../shaders/shader.h
-/home/logan/C++ Graphics/Project Datasky/src/shaders/shader.h
-chunk.h
-/home/logan/C++ Graphics/Project Datasky/src/worldgen/chunk.h
-../player/player.h
-/home/logan/C++ Graphics/Project Datasky/src/player/player.h
-
-/home/logan/C++ Graphics/Project Datasky/src/worldgen/tile.h
 

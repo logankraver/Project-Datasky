@@ -24,8 +24,9 @@
 
 //functions
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
-void processInput(GLFWwindow* window, player *playerchar);
-
+void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);
+void processInput(GLFWwindow* window);
+void move_player(player *playerchar);
 
 //global vars
 //-----------
@@ -37,6 +38,9 @@ const unsigned int SCREEN_HEIGHT = 600;
 float deltatime = 0.0f;
 float lastframe = 0.0f;
 float movementSpeed = 0.5f; 
+
+//player
+player playercharacter;
 
 int main() {
 
@@ -59,6 +63,9 @@ int main() {
     //viewport creation
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
+    //key callback
+    glfwSetKeyCallback(window, key_callback);
+
     //initalize GLAD
     if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
     {
@@ -74,8 +81,7 @@ int main() {
     glm::mat4 projection = glm::perspective(glm::radians(45.0f), (float)SCREEN_WIDTH/(float)SCREEN_HEIGHT, 0.1f, 100.0f);
 
     //player
-    player playercharacter;
-    player *ptrPlayer = &playercharacter;
+    playercharacter.initialize();
 
     //object generator
     objectGenerator oGen;
@@ -99,7 +105,7 @@ int main() {
         lastframe = currentframe;
 
         //process input
-        processInput(window, ptrPlayer);
+        processInput(window);
 
         //render
         glClearColor(0.7f, 0.7f, 0.9f, 1.0f);
@@ -123,7 +129,29 @@ int main() {
 
 }
 
-void processInput(GLFWwindow* window, player *playerchar) {
+void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
+{
+    if (key == GLFW_KEY_W && action == GLFW_RELEASE)
+    {
+        playercharacter.moving = false;
+    }
+    else if (key == GLFW_KEY_A && action == GLFW_RELEASE)
+    {
+        playercharacter.moving = false;
+    }
+    else if (key == GLFW_KEY_S && action == GLFW_RELEASE)
+    {
+        playercharacter.moving = false;
+    }
+    else if (key == GLFW_KEY_D && action == GLFW_RELEASE)
+    {
+        playercharacter.moving = false;
+    }
+    
+}
+
+void processInput(GLFWwindow* window) 
+{
     //exit
     if (glfwGetKey(window, GLFW_KEY_ESCAPE))
     {
@@ -134,28 +162,33 @@ void processInput(GLFWwindow* window, player *playerchar) {
     if (glfwGetKey(window, GLFW_KEY_W))
     {
         float velocity = movementSpeed * deltatime;
-        playerchar->move(UP, velocity);
-    }
+        playercharacter.move(UP, velocity);
+        playercharacter.playerdirection = UP;
+    } 
     else if (glfwGetKey(window, GLFW_KEY_A))
     {
         float velocity = movementSpeed * deltatime;
-        playerchar->move(LEFT, velocity);
+        playercharacter.move(LEFT, velocity);
+        playercharacter.playerdirection = LEFT;
     }
     else if (glfwGetKey(window, GLFW_KEY_S))
     {
         float velocity = movementSpeed * deltatime;
-        playerchar->move(DOWN, velocity);
+        playercharacter.move(DOWN, velocity);
+        playercharacter.playerdirection = DOWN;
     }
     else if (glfwGetKey(window, GLFW_KEY_D))
     {
         float velocity = movementSpeed * deltatime;
-        playerchar->move(RIGHT, velocity);
+        playercharacter.move(RIGHT, velocity);
+        playercharacter.playerdirection = RIGHT;
     }
 }
 
 
 
-void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
+void framebuffer_size_callback(GLFWwindow* window, int width, int height) 
+{
     glViewport(0, 0, width, height);
 }
 

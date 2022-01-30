@@ -59,3 +59,4 @@ THE TO-DO LIST
 - add infinite world gen (DONE)
 - render only spec chunks to help performance (DONE)
 - Procedurally generated trees (DONE)
+- Player walking animations (DONE)
